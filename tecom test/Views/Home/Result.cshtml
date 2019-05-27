@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Result</title>
+</head>
+<body>
+    <div>
+        <p>Candidate <b>@ViewBag.Candidate</b> @ViewBag.Result</p>
+        <hr />
+        @if (ViewBag.Errors != null)
+        {
+            <p>Reason list:</p>
+            foreach (var err in ViewBag.Errors)
+            {
+                <p>@err</p>
+            }
+        }
+    </div>
+</body>
+@Html.ActionLink("Back", "Index")
+</html>
