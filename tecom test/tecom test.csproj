@@ -126,8 +126,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Cosmo.cs" />
+    <Compile Include="Models\DoctorTest.cs" />
     <Compile Include="Models\Mark.cs" />
+    <Compile Include="Models\RangeTest.cs" />
     <Compile Include="Models\Test.cs" />
+    <Compile Include="Models\TestSystem.cs" />
     <Compile Include="Validators\NumericValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
