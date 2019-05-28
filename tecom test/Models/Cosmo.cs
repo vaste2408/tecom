@@ -14,14 +14,17 @@ namespace tecom_test.Models
 
         [Required(ErrorMessage = "Weight field cannot be empty")]
         [NumericValidator(paramName: "Weight")]
+        [Range(1, 300, ErrorMessage = "Weight must be greater than 0")]
         public short Weigth { get; set; }
 
         [Required(ErrorMessage = "Length field cannot be empty")]
         [NumericValidator(paramName: "Length")]
+        [Range(1, 300, ErrorMessage = "Length must be greater than 0")]
         public byte Length { get; set; } //0-255
 
         [Required(ErrorMessage = "Age field cannot be empty")]
         [NumericValidator(paramName: "Age")]
+        [Range(1, 200, ErrorMessage = "Age must be greater than 0")]
         public byte Age { get; set; }
 
         [Required(ErrorMessage = "Vision field cannot be empty")]

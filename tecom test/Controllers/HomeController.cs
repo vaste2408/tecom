@@ -30,7 +30,7 @@ namespace tecom_test.Controllers
                 //range test
                 var WeigthTest = new RangeTest
                 {
-                    Name = "Weigth"
+                    paramName = "Weigth"
                     ,
                     param = candidate.Weigth
                     ,
@@ -41,7 +41,7 @@ namespace tecom_test.Controllers
 
                 var TallTest = new RangeTest
                 {
-                    Name = "Tall"
+                    paramName = "Tall"
                     ,
                     param = candidate.Length
                     ,
@@ -52,7 +52,7 @@ namespace tecom_test.Controllers
 
                 var AgeTest = new RangeTest
                 {
-                    Name = "Age"
+                    paramName = "Age"
                     ,
                     param = candidate.Age
                     ,
@@ -63,7 +63,7 @@ namespace tecom_test.Controllers
 
                 var EyesTest = new RangeTest
                 {
-                    Name = "Vision"
+                    paramName = "Vision"
                     ,
                     param = candidate.Vision
                     ,
@@ -75,7 +75,7 @@ namespace tecom_test.Controllers
                 //doctor
                 var SmokingTest = new DoctorTest
                 {
-                    Name = "Smoke"
+                    paramName = "Smoke"
                     ,
                     param = candidate
                     ,
@@ -86,7 +86,7 @@ namespace tecom_test.Controllers
 
                 var TherapyTest = new DoctorTest
                 {
-                    Name = "Therapy"
+                    paramName = "Therapy"
                     ,
                     param = candidate
                     ,
@@ -102,7 +102,7 @@ namespace tecom_test.Controllers
 
                 var PsychoTest = new DoctorTest
                 {
-                    Name = "Psychology"
+                    paramName = "Psychology"
                     ,
                     param = candidate
                     ,
@@ -117,7 +117,7 @@ namespace tecom_test.Controllers
                 //fuzz test
                 var WeightAndHabbits = new Test
                 {
-                    Name = "Wight and bad habbits"
+                    paramName = "Wight and bad habbits"
                     ,
                     Type = TestTypes.Fuzz
                     ,

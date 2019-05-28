@@ -7,12 +7,12 @@ namespace tecom_test.Models
 {
     public class Test
     {
-        public string Name;
-        public Mark Mark;
-        public TestTypes Type;
+        public Mark Mark { get; set; }
+        public TestTypes Type { get; set; }
 
-        public Func<dynamic, List<string>, Mark> Examine;
-        public dynamic param;
+        public Func<dynamic, List<string>, Mark> Examine { get; set; }
+        public dynamic param { get; set; }
+        public string paramName { get; set; }
 
         public Test()
         {
@@ -35,7 +35,7 @@ namespace tecom_test.Models
 
     public class RangeTest : Test
     {
-        public short[] borders;
+        public short[] borders { get; set; }
         public RangeTest()
         {
             Type = TestTypes.Range;
@@ -50,8 +50,8 @@ namespace tecom_test.Models
                     (a > borders[2] && a <= borders[3]))
                 {
                     l.Add((a >= borders[0] && a < borders[1]
-                        ? "Candidate " + Name + " is in [" + borders[0].ToString() + ";" + borders[1].ToString() + ") range"
-                        : "Candidate " + Name + "  is in [" + borders[2].ToString() + ";" + borders[3].ToString() + ") range")
+                        ? "Candidate " + paramName + " is in [" + borders[0].ToString() + ";" + borders[1].ToString() + ") range"
+                        : "Candidate " + paramName + "  is in [" + borders[2].ToString() + ";" + borders[3].ToString() + ") range")
                         + " : passable");
                     mark.SetScore((sbyte)Marks.Уд);
                 }
@@ -59,8 +59,8 @@ namespace tecom_test.Models
                 else if (a > borders[3] || a < borders[0])
                 {
                     l.Add((a > borders[3]
-                        ? "Candidate " + Name + "  is more than " + borders[3].ToString()
-                        : "Candidate " + Name + "  is less than " + borders[0].ToString())
+                        ? "Candidate " + paramName + "  is more than " + borders[3].ToString()
+                        : "Candidate " + paramName + "  is less than " + borders[0].ToString())
                         + " : unexceptable");
                     mark.SetScore((sbyte)Marks.Неуд);
                 }
@@ -72,8 +72,8 @@ namespace tecom_test.Models
 
     public class DoctorTest : Test
     {
-        public sbyte[] maxDiseases;
-        public string[] inspectDiseases;
+        public sbyte[] maxDiseases { get; set; }
+        public string[] inspectDiseases { get; set; }
 
         public DoctorTest()
         {
