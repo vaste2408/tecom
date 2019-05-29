@@ -16,7 +16,7 @@ namespace tecom_test.Models
                 var mark = new Mark();
 
                 if (a >= borders[1] && a <= borders[2])
-                    mark.SetScore((sbyte)Marks.Хор);
+                    mark.Score = (sbyte)Marks.Хор;
 
                 else if ((a >= borders[0] && a < borders[1]) ||
                     (a > borders[2] && a <= borders[3]))
@@ -25,7 +25,7 @@ namespace tecom_test.Models
                         ? "Candidate " + paramName + " is in [" + borders[0].ToString() + ";" + borders[1].ToString() + ") range"
                         : "Candidate " + paramName + "  is in [" + borders[2].ToString() + ";" + borders[3].ToString() + ") range")
                         + " : passable");
-                    mark.SetScore((sbyte)Marks.Уд);
+                    mark.Score = (sbyte)Marks.Уд;
                 }
 
                 else if (a > borders[3] || a < borders[0])
@@ -34,7 +34,7 @@ namespace tecom_test.Models
                         ? "Candidate " + paramName + "  is more than " + borders[3].ToString()
                         : "Candidate " + paramName + "  is less than " + borders[0].ToString())
                         + " : unexceptable");
-                    mark.SetScore((sbyte)Marks.Неуд);
+                    mark.Score = (sbyte)Marks.Неуд;
                 }
 
                 return mark;

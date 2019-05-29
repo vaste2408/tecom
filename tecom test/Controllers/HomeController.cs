@@ -135,17 +135,17 @@ namespace tecom_test.Controllers
                                 l.Add("Candidate smokes, he's ill and his weight is " +
                                     (a.Weigth > 120 ? "over than 120" : "less than 60")
                                     + " : unexceptable");
-                            mark.SetScore((sbyte)Marks.Неуд);
+                            mark.Score = (sbyte)Marks.Неуд;
                         }
 
                         else if ((a.oDiseasesAndHabbits.Contains("virus") || a.oDiseasesAndHabbits.Contains("cold") && a.Weigth > 110))
                         {
                             l.Add("Candidate is ill and his weight is over than 110 : passable");
-                            mark.SetScore((sbyte)Marks.Уд);
+                            mark.Score = (sbyte)Marks.Уд;
                         }
 
                         else
-                            mark.SetScore((sbyte)Marks.Хор);
+                            mark.Score = (sbyte)Marks.Хор;
 
                         return mark;
                     }

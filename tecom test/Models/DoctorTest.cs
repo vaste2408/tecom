@@ -20,18 +20,18 @@ namespace tecom_test.Models
                 var disCount = String.IsNullOrWhiteSpace(a.oDiseasesAndHabbits) ? 0 : uniques.Intersect(inspectDiseases).Count();
 
                 if (disCount <= maxDiseases[0])
-                    mark.SetScore((sbyte)Marks.Хор);
+                    mark.Score = (sbyte)Marks.Хор;
 
                 else if (disCount == maxDiseases[1])
                 {
                     l.Add("Candidate has " + maxDiseases[1] + " illnes(-es) : passable");
-                    mark.SetScore((sbyte)Marks.Уд);
+                    mark.Score = (sbyte)Marks.Уд;
                 }
 
                 else if (disCount > maxDiseases[2])
                 {
                     l.Add("Candidate has more than " + maxDiseases[2] + " illnes(-es) : unexceptable");
-                    mark.SetScore((sbyte)Marks.Неуд);
+                    mark.Score = (sbyte)Marks.Неуд;
                 }
 
                 return mark;
