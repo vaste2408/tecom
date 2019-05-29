@@ -15,7 +15,7 @@ namespace tecom_test.Models
                 SetScore(Score);
             }
         }
-        private sbyte pScore { get; set; }
+        private sbyte pScore;
         public Mark()
         {
 
